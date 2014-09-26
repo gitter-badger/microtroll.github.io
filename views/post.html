@@ -1,0 +1,19 @@
+<div id="post"></div>
+
+<script type="text/html" id="tmpl">
+  <% for(var i in this.feed.entry.reverse()) { %>
+    <% if(i === 1) { %>
+      <article id="entry_<% i %>">
+        <h3 name="entry_<% i %>">
+          <a href="#entry_<% i %>"><% this.feed.entry[i].title.$t %></a>
+        </h3>
+        <p><% this.feed.entry[i].updated.$t %></p>
+        <% this.feed.entry[i].content.$t.replace('content:', '') %>
+      </article>
+    <% } else { %>
+      <p>
+        Article #<% i %> could not be found...
+      </p>
+    <% } %>
+  <% } %>
+</script>

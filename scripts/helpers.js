@@ -17,6 +17,7 @@
   };
   */
 
+  // fadein effect
   $.fadeIn = function (el) {
     el.classList.add('show');
     el.classList.remove('hide');

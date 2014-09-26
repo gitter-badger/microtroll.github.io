@@ -6,6 +6,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="shortcut icon" href="favicon.ico">
+
   <link rel="stylesheet" href="styles/grid.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -13,26 +15,28 @@
 
   <div class="grid">
 
-    <div class="u-1">
-
+    <aside class="u-1-6">
       <h1>tibor.rocks</h1>
 
-      <aside class="u-1-6">
+      <nav>
         <ul>
           <li><a href="#/">Home</a></li>
           <li><a href="#/about">About</a></li>
           <li><a href="https://github.com/microtroll">GitHub</a></li>
           <li><a href="https://twitter.com/tibor_rocks">Twitter</a></li>
         </ul>
+      </nav>
 
+      <div class="for-desktop">
         <h3>Projects</h3>
-        <ul id="repos"></ul>
-      </aside>
-
-      <div class="u-5-6 hide" id="content">
-        <!-- Content -->
+        <nav>
+          <ul id="repos"></ul>
+        </nav>
       </div>
+    </aside>
 
+    <div class="u-5-6 hide" id="content">
+      <!-- Content -->
     </div>
 
   </div>

@@ -1,8 +1,7 @@
 body {
   background: #272822;
   color: #c8c8c2;
-  font-family: monospace;
-  font: 300 16px monospace;
+  font: 300 1.2em monospace;
 }
 
 ::selection {
@@ -34,21 +33,41 @@ a:focus {
 
 h1 {
   text-shadow: 2px 2px 5px #000;
+  font-size: 2em;
+  margin-top: 3px;
+  padding-left: 32px;
+  background: url(../images/hand.png) no-repeat left center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 article {
   border-bottom: 1px dotted #424242;
   padding-bottom: 15px;
+  line-height: 1em;
 }
 
 article:last-of-type {
   border: 0;
 }
 
+article h3:hover {
+  cursor: pointer;
+}
+
+article h3:hover:after {
+  content: " #";
+  color: #f92672;
+}
+
 pre code {
   background-color: #111;
   color: #fff;
-  font: normal 13px "Courier New";
+  font: normal 0.7em "Courier New";
   padding: 10px;
   border: 1px solid #333;
   border-left-width: 5px;
