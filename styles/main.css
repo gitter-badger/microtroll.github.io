@@ -1,0 +1,55 @@
+body {
+  background: #272822;
+  color: #c8c8c2;
+  font-family: monospace;
+  font: 300 16px monospace;
+}
+
+::selection {
+  background-color: #f92672;
+}
+
+::-moz-selection {
+  background-color: #f92672;
+}
+
+.show {
+  transition: opacity 1600ms;
+}
+
+.hide {
+  opacity: 0;
+}
+
+a {
+  color: #79abff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #1e90ff;
+  text-decoration: underline;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px #000;
+}
+
+article {
+  border-bottom: 1px dotted #424242;
+  padding-bottom: 15px;
+}
+
+article:last-of-type {
+  border: 0;
+}
+
+pre code {
+  background-color: #111;
+  color: #fff;
+  font: normal 13px "Courier New";
+  padding: 10px;
+  border: 1px solid #333;
+  border-left-width: 5px;
+}

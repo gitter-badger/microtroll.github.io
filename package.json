@@ -1,0 +1,23 @@
+{
+  "name": "microtroll.github.io",
+  "version": "1.0.0",
+  "description": "microtroll.github.io ====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microtroll/microtroll.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microtroll/microtroll.github.io/issues"
+  },
+  "homepage": "https://github.com/microtroll/microtroll.github.io",
+  "devDependencies": {
+    "connect": "^3.2.0",
+    "serve-static": "^1.6.3"
+  }
+}
