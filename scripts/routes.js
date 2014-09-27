@@ -1,4 +1,4 @@
-(function (route) {
+(function(route) {
   'use strict';
 
   // parse the url

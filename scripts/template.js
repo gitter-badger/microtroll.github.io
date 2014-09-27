@@ -1,4 +1,4 @@
-(function (tmpl) {
+(function(tmpl) {
   'use strict';
 
   var re = /<%(.+?)%>/g,
@@ -7,13 +7,13 @@
     cursor = 0,
     match;
 
-  var compile = function (line, js) {
+  var compile = function(line, js) {
     js ? (code += line.match(reExp) ? line + '\n' : 'r.push(' + line + ');\n') :
       (code += line !== '' ? 'r.push("' + line.replace(/"/g, '\\"') + '");\n' : '');
     return compile;
   };
 
-  tmpl.render = function (html, data) {
+  tmpl.render = function(html, data) {
     while (match = re.exec(html)) {
       compile(html.slice(cursor, match.index))(match[1], true);
       cursor = match.index + match[0].length;

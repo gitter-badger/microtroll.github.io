@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   'use strict';
 
   // getElementById
@@ -18,7 +18,7 @@
   */
 
   // fadein effect
-  $.fadeIn = function (el) {
+  $.fadeIn = function(el) {
     el.classList.add('show');
     el.classList.remove('hide');
   };
