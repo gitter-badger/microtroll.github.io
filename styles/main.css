@@ -64,10 +64,10 @@ article h3:hover:after {
   color: #f92672;
 }
 
-pre code {
+pre {
   background-color: #111;
   color: #fff;
-  font: normal 0.7em "Courier New";
+  font: normal 0.8em "Courier New";
   padding: 10px;
   border: 1px solid #333;
   border-left-width: 5px;

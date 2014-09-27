@@ -50,7 +50,9 @@
       var resp = JSON.parse(this.response);
 
       for(var i in resp) {
-        html += '<li><a href="' + resp[i].html_url + '">' + resp[i].name + '</a></li>';
+        if (resp[i].name !== 'microtroll.github.io') {
+          html += '<li><a href="' + resp[i].html_url + '">' + resp[i].name + '</a></li>';
+        }
       }
 
       $.id('repos').innerHTML = html;
