@@ -22,8 +22,19 @@
       pathname = pathname.replace('#/', '');
     }
 
-    if (pathname === '') {
+    if (pathname.indexOf('?') !== -1) {
+      pathname = pathname.substring(0, pathname.indexOf('?'));
+    }
+
+    // home page
+    if (pathname === '' || pathname === 'posts') {
       pathname = 'posts';
+      loadArticles('https://spreadsheets.google.com/feeds/list/13KlXP8NZ7f_g8y-uVOGzo65WIy3pggwod3LFXA75Tew/od6/public/basic?hl=en_US&alt=json');
+    }
+
+    // article page
+    if (pathname === 'post') {
+      pathname = 'post';
       loadArticles('https://spreadsheets.google.com/feeds/list/13KlXP8NZ7f_g8y-uVOGzo65WIy3pggwod3LFXA75Tew/od6/public/basic?hl=en_US&alt=json');
     }
 

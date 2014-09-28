@@ -4,6 +4,7 @@
   <% for(var i in this.feed.entry.reverse()) { %>
     <article id="entry_<% i %>">
       <h3 name="entry_<% i %>">
+        <!-- <a href="#/post?filter=<% i %>"><% this.feed.entry[i].title.$t %></a> -->
         <a href="#"><% this.feed.entry[i].title.$t %></a>
       </h3>
       <p>
