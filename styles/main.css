@@ -39,6 +39,10 @@ h1 {
   background: url(../images/hand.png) no-repeat left center;
 }
 
+aside {
+  margin-bottom: 15px;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -53,6 +57,10 @@ article {
 
 article:last-of-type {
   border: 0;
+}
+
+article:first-child h3 {
+  margin-top: 0;
 }
 
 article h3:hover {
