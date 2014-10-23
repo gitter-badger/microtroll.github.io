@@ -36,7 +36,12 @@ h1 {
   font-size: 2em;
   margin-top: 3px;
   padding-left: 32px;
-  background: url(../images/hand.png) no-repeat left center;
+  background: url(../public/hand.png) no-repeat left center;
+}
+
+h3.title {
+  color: #79abff;
+  margin-top: 0;
 }
 
 aside {

@@ -1,18 +1,19 @@
 <div id="posts"></div>
 
 <script type="text/html" id="tmpl">
-  <% for(var i in this.feed.entry.reverse()) { %>
-    <article id="entry_<% i %>">
-      <h3 name="entry_<% i %>">
-        <!-- <a href="#/post?filter=<% i %>"><% this.feed.entry[i].title.$t %></a> -->
-        <a href="#"><% this.feed.entry[i].title.$t %></a>
-      </h3>
-      <p>
-        <time datetime="<% this.feed.entry[i].updated.$t %>"><% this.feed.entry[i].updated.$t %></time>
-      </p>
-      <div>
-        <% this.feed.entry[i].content.$t.replace('content:', '') %>
-      </div>
-    </article>
+  <% for(var i in this.entry.reverse()) { %>
+    <% if(this.entry[i].title) { %>
+      <article id="entry_<% i %>">
+        <h3 name="entry_<% i %>">
+          <a href="#"><% this.entry[i].title %></a>
+        </h3>
+        <p>
+          <time datetime="<% this.entry[i].date %>"><% this.entry[i].date %></time>
+        </p>
+        <div>
+          <% this.entry[i].content %>
+        </div>
+      </article>
+    <% } %>
   <% } %>
 </script>
