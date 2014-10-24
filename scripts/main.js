@@ -2,7 +2,9 @@
   'use strict';
 
   // get repos
-  var getRepos = (function() {
+  (function() {
+    $.fadeOut($.id('repos'));
+
     $.ajax({
       url: 'https://api.github.com/users/microtroll/repos?access_token=cf06312c14fbd9071f6806902db094032afcdd70',
       method: 'GET',
@@ -41,23 +43,9 @@
     });
   }
 
-  // load view
-  var navigate = function() {
-    $.fadeOut($.id('content'));
-
-    var pathname = route.parse().hash;
-
-    if (pathname.indexOf('#/') !== -1) {
-      pathname = pathname.replace('#/', '');
-    }
-
-    // home page
-    if (pathname === '' || pathname === 'posts') {
-      pathname = 'posts';
-    }
-
+  function getView(name) {
     $.ajax({
-      url: '/views/' + pathname + '.html',
+      url: '/views/' + name + '.html',
       method: 'GET',
       success: function(resp) {
         $.id('content').innerHTML = resp;
@@ -67,11 +55,28 @@
         $.id('content').innerHTML = 'Could not load view...';
       }
     });
+  }
+
+  // load view
+  function navigate() {
+    var pathname = route.parse().hash;
+    $.fadeOut($.id('content'));
+
+    if (pathname.indexOf('#/') !== -1) {
+      pathname = pathname.replace('#/', '');
+    }
+
+    // home page
+    if (pathname === '') {
+      pathname = 'posts';
+    }
+
+    getView(pathname);
 
     if (pathname === 'posts') {
       getPosts();
     }
-  };
+  }
 
   // init
   window.addEventListener('hashchange', navigate);

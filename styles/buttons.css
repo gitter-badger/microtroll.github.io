@@ -1,0 +1,56 @@
+.button {
+  font-size: 0.9em;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #555;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px 14px;
+  user-select: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: #ccc;
+  box-shadow: 2px 2px 0 #777;
+}
+.button.info {
+  background-color: #4679bd;
+  box-shadow: 2px 2px 0 #124588;
+}
+.button.info:hover,
+.button.info.active {
+  box-shadow: inset 1px 1px 0 #124588;
+}
+.button.success {
+  background-color: #56A056;
+  box-shadow: 2px 2px 0 #074607;
+}
+.button.success:hover,
+.button.success.active {
+  box-shadow: inset 1px 1px 0 #074607;
+}
+.button.alert {
+  background-color: #CA1919;
+  box-shadow: 2px 2px 0 #5F0000;
+}
+.button.alert:hover,
+.button.alert.active {
+  box-shadow: inset 1px 1px 0 #5F0000;
+}
+.button.disabled {
+  background-color: #CA1919;
+  box-shadow: 2px 2px 0 #5F0000;
+}
+.button.alert:hover,
+.button.alert.active {
+  box-shadow: inset 1px 1px 0 #5F0000;
+}
+.button.disabled {
+  background-color: #eee;
+  box-shadow: 2px 2px 0 #ddd;
+  color: #999;
+  text-shadow: 0 0 0 #ddd;
+  cursor: not-allowed;
+}
